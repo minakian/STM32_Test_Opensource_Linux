@@ -1,7 +1,7 @@
 TARGET=main
 
-CC=arm-none-eabi-gcc
-LD=arm-none-eabi-gcc
+CC=arm-none-eabi-g++
+LD=arm-none-eabi-g++
 AR=arm-none-eabi-ar
 AS=arm-none-eabi-as
 CP=arm-none-eabi-objcopy
@@ -9,11 +9,11 @@ OD=arm-none-eabi-objdump
 SE=arm-none-eabi-size
 SF=st-flash
 
-CFLAGS  = -std=gnu99 -g -O2 -Wall
+CFLAGS  = -std=c++11 -g -O2 -Wall
 CFLAGS += -mlittle-endian -mthumb -mthumb-interwork -mcpu=cortex-m4
 CFLAGS += -fsingle-precision-constant -Wdouble-promotion
 
-SRCS =  main.c
+SRCS =  main.cpp
 
 .PHONY: $(TARGET)
 
